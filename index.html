@@ -93,7 +93,7 @@ const CONFIG = {
   title: 'ADHD RAVE',                                // big rainbow title (also used in the phone's media controls)
   defaultLanguage: 'ko',                             // 'ko' or 'en' (players can switch with the button in the corner)
 
-  posterUrl: 'poster.jpg',  // square image in the same folder as this page; shown on the page and in the notification. '' for none.
+  posterUrl: '1792392198032.jpg',  // square image in the same folder as this page; shown on the page and in the notification. '' for none.
 
   cacheBust: true,        // adds ?t=<time> on each connect so the browser never reuses an old connection
   retryDelayMs: 3000,     // wait this long before reconnecting after a dropout
@@ -102,7 +102,7 @@ const CONFIG = {
   autoCatchUp: true,           // set to false to turn automatic catch-up off completely
   maxLagSeconds: 20,           // "far behind" means more than this many seconds
   lagSustainSeconds: 10,       // ...and it must stay that way for this many seconds in a row
-  catchUpCooldownSeconds: 60,  // never auto-jump more than once per this many seconds
+  catchUpCooldownSeconds: 300,  // never auto-jump more than once per this many seconds
 
   // The "behind live" indicator colours
   lagGoodSeconds: 6,      // up to this: green
@@ -122,28 +122,28 @@ const STRINGS = {
     paused: '일시정지',
     buffering: '버퍼링 중...',
     reconnecting: '다시 연결하는 중...',
-    tapToStart: '"라이브 듣기"를 눌러 시작하세요',
-    nowPlaying: '지금 재생 중',
+    tapToStart: '"▶️ 라이브 듣기"를 눌러 시작하세요',
+    nowPlaying: 'DJ',
     offAir: '다음 DJ 준비 중',
     npUnavailable: '재생 정보를 불러오지 못했어요',
     npLive: 'LIVE',
-    listen: '▶ 라이브 듣기',
-    play: '▶ 재생',
+    listen: '▶️ 라이브 듣기',
+    play: '▶️ 재생',
     pause: '⏸ 일시정지',
     jump: '⏩ 라이브로 이동',
-    lagLabel: '라이브와의 시간 차이 (대략)',
+    lagLabel: '라이브와의 시간차 (대략)',
     lagPaused: '일시정지됨',
     lagMeasuring: '측정 중...',
     lagSeconds: s => '약 ' + s + '초',
     hintPaused: '⏩ 버튼을 누르면 라이브 위치로 돌아와요',
     hintGood: '실시간과 거의 같아요',
     hintWarn: '조금 뒤처졌어요',
-    hintBad: '많이 뒤처졌어요! ⏩ 버튼을 눌러 따라잡으세요',
-    howTitle: '🎧 이렇게 들어보세요',
+    hintBad: '많이 뒤처졌어요! ⏩ 버튼을 눌러 새로고침 하세요',
+    howTitle: '🎧 플레이어 사용법',
     steps: [
       '로블록스 게임 안의 라이브 DJ 사운드는 꺼 주세요.',
-      '이 페이지에서 "▶ 라이브 듣기"를 누른 뒤, 페이지는 그대로 두고 로블록스를 켜세요. 소리는 백그라운드에서 계속 나와요.',
-      '소리가 점점 늦어지는 것 같거나, 일시정지했다가 다시 들을 때는 ⏩ 버튼을 눌러 가장 최신 위치로 이동하세요! 알림창의 ⏩ / ⏭ 버튼으로도 할 수 있어요.'
+      '이 페이지에서 "▶️ 라이브 듣기"를 누른 뒤, 페이지는 그대로 두고 다시 로블록스를 켜세요. 고음질 라이브 DJ 사운드가 뒤에서 계속 재생될 것입니다!',
+      '소리가 점점 늦어지는 것 같거나, 일시정지했다가 다시 들을 때는 ⏩ 버튼을 눌러 가장 최신 위치로 새로고침 하세요! 알림창의 ⏩ / ⏭️ 버튼으로도 할 수 있어요.'
     ],
     langButton: 'EN'
   },
@@ -154,13 +154,13 @@ const STRINGS = {
     paused: 'Paused',
     buffering: 'Buffering...',
     reconnecting: 'Reconnecting...',
-    tapToStart: 'Tap "Listen live" to start',
-    nowPlaying: 'Now playing',
+    tapToStart: 'Tap "▶️ Listen live" to start',
+    nowPlaying: 'DJ',
     offAir: 'Next DJ coming up',
     npUnavailable: 'Now playing unavailable',
     npLive: 'LIVE',
-    listen: '▶ Listen live',
-    play: '▶ Play',
+    listen: '▶️ Listen live',
+    play: '▶️ Play',
     pause: '⏸ Pause',
     jump: '⏩ Jump to live',
     lagLabel: 'Behind live (approx.)',
@@ -174,8 +174,8 @@ const STRINGS = {
     howTitle: '🎧 How to listen',
     steps: [
       'Turn off the live DJ audio inside Roblox.',
-      'Press "▶ Listen live" on this page, then switch to Roblox. The music keeps playing in the background.',
-      'If the sound seems to fall behind, or after you pause, press ⏩ to jump to the latest moment! The ⏩ / ⏭ button in your notification bar does the same.'
+      'Press "▶️ Listen live" on this page, then switch to Roblox. The music keeps playing in the background.',
+      'If the sound seems to fall behind, or after you pause, press ⏩ to jump to the latest moment! The ⏩ / ⏭️ button in your notification bar does the same.'
     ],
     langButton: '한국어'
   }
